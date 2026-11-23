@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LondonBarberShop</title>
+<meta name="description" content="">
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta name="theme-color" content="#f4edda">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="content.js"></script>
+<script src="main.js" defer></script>
+</head>
+<body>
+
+<!-- Icon sprite: Lucide icons (ISC licence). TikTok uses "music" as a stand-in. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-website" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link btn btn--primary btn--sm" href="#main" data-text="ui.skip">Saltar al contenido</a>
+
+<!-- S01 Header / nav -->
+<header class="site-header" id="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="#hero" id="brand"></a>
+    <nav class="nav" id="nav" aria-label="Principal" data-aria="ui.mainNav">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#hero" data-text="nav.hero"></a></li>
+        <li><a class="nav__link" href="#services" data-text="nav.services"></a></li>
+        <li><a class="nav__link" href="#products" data-text="nav.products"></a></li>
+        <li><a class="nav__link" href="#gallery" data-text="nav.gallery"></a></li>
+        <li><a class="nav__link" href="#contact" data-text="nav.contact"></a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">
+      <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+      <span class="visually-hidden" id="nav-toggle-label"></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- S02 Hero -->
+  <section class="hero section" id="hero" aria-labelledby="hero-title">
+    <div class="hero__media" id="hero-media"></div>
+    <div class="container">
+      <div class="hero__content">
+        <p class="eyebrow" data-text="hero.eyebrow"></p>
+        <h1 class="h-display" id="hero-title" data-text="hero.title"></h1>
+        <p class="hero__subtitle" data-text="hero.subtitle"></p>
+        <p class="lead" data-text="hero.text"></p>
+        <div class="btn-group">
+          <a class="btn btn--whatsapp" data-link="whatsapp" data-icon="whatsapp"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S03 Services -->
+  <section class="section section--alt" id="services" aria-labelledby="services-title" data-list="services.items">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow" data-text="services.eyebrow"></p>
+        <h2 class="h-section" id="services-title" data-text="services.title"></h2>
+        <p class="lead" data-text="services.intro"></p>
+      </div>
+      <ul class="service-list" id="services-list"></ul>
+    </div>
+  </section>
+
+  <!-- S05 Products -->
+  <section class="section" id="products" aria-labelledby="products-title" data-list="products.items">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow" data-text="products.eyebrow"></p>
+        <h2 class="h-section" id="products-title" data-text="products.title"></h2>
+        <p class="lead" data-text="products.intro"></p>
+      </div>
+      <ul class="grid grid--plain" id="products-grid"></ul>
+    </div>
+  </section>
+
+  <!-- S06 Gallery -->
+  <section class="section section--alt" id="gallery" aria-labelledby="gallery-title" data-list="gallery.items">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow" data-text="gallery.eyebrow"></p>
+        <h2 class="h-section" id="gallery-title" data-text="gallery.title"></h2>
+        <p class="lead" data-text="gallery.intro"></p>
+      </div>
+      <ul class="grid grid--gallery grid--plain" id="gallery-grid"></ul>
+    </div>
+  </section>
+
+  <!-- S07 Hours + S08 Contact -->
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow" data-text="contact.eyebrow"></p>
+        <h2 class="h-section" id="contact-title" data-text="contact.title"></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-item" id="hours-block">
+          <h3 class="contact-item__label" data-text="hours.title"></h3>
+          <ul class="hours" id="hours-list"></ul>
+        </div>
+        <div class="contact-item" id="address-block">
+          <h3 class="contact-item__label" data-text="contact.labels.address"></h3>
+          <address class="contact-address" data-text="contact.address"></address>
+          <a id="map-link"></a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item" id="phone-block">
+            <h3 class="contact-item__label" data-text="contact.labels.phone"></h3>
+            <ul class="plain-list" id="phone-list"></ul>
+          </div>
+          <div class="contact-item" id="email-block">
+            <h3 class="contact-item__label" data-text="contact.labels.email"></h3>
+            <span id="email-slot"></span>
+          </div>
+          <ul class="socials" id="contact-socials"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-band container">
+      <p class="h-section cta-band__title" data-text="contact.ctaTitle"></p>
+      <div class="btn-group">
+        <a class="btn btn--whatsapp" data-link="whatsapp" data-icon="whatsapp"></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- S10 Footer -->
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <span class="brand" id="footer-brand"></span>
+    <ul class="socials" id="footer-socials"></ul>
+    <p class="site-footer__copy" id="copyright"></p>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp button (always on screen). Hidden when its URL is empty. -->
+<aside class="fab-stack" id="fab-stack">
+  <ul class="fab-stack__list">
+    <li><a class="fab fab--whatsapp" data-fab="whatsapp" data-icon="whatsapp"></a></li>
+  </ul>
+</aside>
+
+<!-- S09 Modal / lightbox -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="icon-btn modal__close" type="button" data-close>
+      <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg>
+      <span class="visually-hidden" data-text="ui.close"></span>
+    </button>
+    <div class="modal__media" id="modal-media"></div>
+    <div class="modal__body">
+      <span class="modal__count" id="modal-count"></span>
+      <h2 class="modal__title" id="modal-title"></h2>
+      <span class="modal__price" id="modal-price"></span>
+      <p class="modal__text" id="modal-text"></p>
+      <div class="modal__nav" id="modal-nav">
+        <button class="icon-btn" type="button" id="modal-prev">
+          <svg class="icon" aria-hidden="true"><use href="#i-left"/></svg>
+          <span class="visually-hidden" data-text="ui.previous"></span>
+        </button>
+        <button class="icon-btn" type="button" id="modal-next">
+          <svg class="icon" aria-hidden="true"><use href="#i-right"/></svg>
+          <span class="visually-hidden" data-text="ui.next"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<noscript><p class="container">Esta página necesita JavaScript activado para mostrar su contenido.</p></noscript>
+</body>
+</html>
